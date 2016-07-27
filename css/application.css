@@ -1,0 +1,17 @@
+.columns{
+  display: flex;
+}
+
+.columns ul{
+  border-left: 1px solid grey;
+}
+
+.columns li:first-child{
+  list-style: none;
+  color: black;
+}
+
+.columns li{
+  max-width: 200px;
+  color: grey;
+}
