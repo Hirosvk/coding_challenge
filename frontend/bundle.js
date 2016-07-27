@@ -21145,7 +21145,7 @@
 	    var results = [];
 	    for (var p in col) {
 	      if (p !== "name") {
-	        results.push(p + '= ' + col[p].join(","));
+	        results.push(p + '= ' + col[p].join(", "));
 	      }
 	    }
 	    return results.map(function (line, idx) {

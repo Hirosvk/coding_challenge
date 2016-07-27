@@ -41,7 +41,7 @@ const Main = React.createClass({
     let results = [];
     for(let p in col){
       if (p !== "name"){
-        results.push(`${p}= ${col[p].join(",")}`);
+        results.push(`${p}= ${col[p].join(", ")}`);
       }
     }
     return results.map((line,idx) => {
