@@ -55,6 +55,7 @@ const Main = React.createClass({
         <h2>enter the property name below.</h2>
         <input ref="property"></input>
         <button onClick={this.getInfo}>Get Info</button>
+        <p>You can keep adding new search results!</p>
         <div className="columns">
           {
             this.state.results.map((resultCol, idx1) => {

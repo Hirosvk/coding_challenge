@@ -21174,6 +21174,11 @@
 	        'Get Info'
 	      ),
 	      React.createElement(
+	        'p',
+	        null,
+	        'You can keep adding new search results!'
+	      ),
+	      React.createElement(
 	        'div',
 	        { className: 'columns' },
 	        this.state.results.map(function (resultCol, idx1) {
