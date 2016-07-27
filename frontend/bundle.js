@@ -21136,8 +21136,17 @@
 	    return React.createElement(
 	      'div',
 	      null,
+	      React.createElement(
+	        'h2',
+	        null,
+	        'enter the property name here.'
+	      ),
 	      React.createElement('input', { ref: 'property' }),
-	      React.createElement('button', { value: 'Get Info', onClick: this.getInfo }),
+	      React.createElement(
+	        'button',
+	        { onClick: this.getInfo },
+	        'Get Info'
+	      ),
 	      React.createElement(
 	        'ul',
 	        null,
@@ -21166,8 +21175,7 @@
 	  getInfo: function getInfo(locale, callback) {
 	    var req = new XMLHttpRequest();
 	    req.open("GET", "https://raw.githubusercontent.com/unicode-cldr/cldr-misc-full/master/main/" + locale + "/delimiters.json");
-	    // req.open("GET", `../node_modules/cldr-misc-full/main/${locale}/delimiters.json`);
-	    req.onreadystatuschange = function () {
+	    req.onload = function () {
 	      callback(JSON.parse(req.responseText), locale);
 	    };
 	    req.send();

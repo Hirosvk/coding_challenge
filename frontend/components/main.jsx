@@ -32,8 +32,9 @@ const Main = React.createClass({
   render(){
     return (
       <div>
+        <h2>enter the property name here.</h2>
         <input ref="property"></input>
-        <button value="Get Info" onClick={this.getInfo} />
+        <button onClick={this.getInfo}>Get Info</button>
         <ul>
           {
             this.state.results.map((result, idx) =>{
