@@ -26,8 +26,6 @@ const Main = React.createClass({
         this.searchForProperty(obj[propName], localeName, property);
       }else if(propName === property){
         this.setState(currentState => {
-          console.log(obj[propName]);
-          console.log(currentState.results[currentState.currentCol]);
           if (currentState.results[currentState.currentCol].hasOwnProperty(obj[propName])){
             currentState.results[currentState.currentCol][obj[propName]].push(localeName);
           } else {
@@ -73,14 +71,3 @@ const Main = React.createClass({
 });
 
 module.exports = Main;
-window.LocaleUtils = LocaleUtils;
-
-
-// }
-// resultCol
-//
-// resultCol.map((result, idx2) =>{
-//   let propName = Object.getOwnPropertyNames(result)[0]
-//   return <li key={idx2}>{propName}: result[propName].join)}</li>;
-// })
-// }
